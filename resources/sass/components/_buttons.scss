@@ -1,0 +1,23 @@
+// Our Buttons
+
+.btn-tanmya-primary {
+    background-color: #246284;
+    color: #FFF;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: #51D8B8;
+        color: #FFF;
+    }
+}
+
+.btn-tanmya-secondary {
+    background-color: #92187B;
+    color: #FFF;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: #F7AD0E;
+        color: #FFF;
+    }
+}
