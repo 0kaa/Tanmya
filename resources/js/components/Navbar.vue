@@ -25,6 +25,11 @@
           <button class="btn btn-tanmya-primary ml-3 fs-14">تسجيل دخول</button>
           <button class="btn btn-tanmya-secondary fs-14">تسجيل جديد</button>
         </div>
+        <div class="d-flex align-items-center mobile-menu">
+          <a href="#" class="menu-icon">
+            <img src="/img/svg/menu.svg" alt="menu" class="img-fluid" />
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -37,24 +42,30 @@ export default {
 </script>
 <style lang="scss" scoped>
 .navbar {
-  // background-color: transparent;
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
   background-color: #fff;
+
   &.fixed {
     position: fixed;
   }
   .logo {
     font-weight: bold;
     margin: 0;
-    max-width: 50px;
+    max-width: 250px;
+    @media (max-width: 992px) {
+      max-width: 100px;
+    }
     a {
       color: #fff;
     }
   }
   .nav-menu {
+    @media (max-width: 992px) {
+      display: none !important;
+    }
     .nav-item {
       .nav-link {
         color: #a4a4a4;
@@ -64,12 +75,20 @@ export default {
       }
     }
   }
-  .menu-btn {
-    background-image: url("/img/svg/menu.svg");
-    background-color: transparent;
-    border: none;
-    width: 53px;
-    height: 53px;
+  .register-menu {
+    @media (max-width: 992px) {
+      display: none !important;
+    }
+  }
+  .menu-icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    @media (min-width: 992px) {
+      display: none;
+    }
   }
 }
 </style>

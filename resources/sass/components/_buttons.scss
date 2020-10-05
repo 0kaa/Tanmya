@@ -5,6 +5,10 @@
     color: #FFF;
     border-radius: 50px;
 
+    &.fs-14 {
+        font-size: 14px;
+    }
+
     &:hover {
         background-color: #51D8B8;
         color: #FFF;
@@ -16,8 +20,23 @@
     color: #FFF;
     border-radius: 50px;
 
+    &.fs-14 {
+        font-size: 14px;
+    }
+
     &:hover {
         background-color: #F7AD0E;
+        color: #FFF;
+    }
+}
+
+.btn-tanmya-primary-yellow {
+    background-color: #F7AD0E;
+    color: #FFF;
+    border-radius: 50px;
+
+    &:hover {
+        box-shadow: 0 10px 6px #00000047;
         color: #FFF;
     }
 }

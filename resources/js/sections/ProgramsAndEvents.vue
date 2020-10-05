@@ -1,0 +1,205 @@
+<template>
+  <section
+    class="programs-and-events"
+    :class="[events.length > 8 ? 'pb-70' : 'pb-100', theme]"
+  >
+    <div class="container">
+      <div class="text-center">
+        <h3 class="section-title text-center mb-5">
+          {{ title }}
+        </h3>
+      </div>
+      <div class="events-boxes">
+        <div class="events row">
+          <div class="col-md-3" v-for="(event, i) in events" :key="i">
+            <div class="inner-box" :class="events.length > 4 ? 'mb-30' : ''">
+              <div class="img">
+                <img
+                  :src="event.image"
+                  alt="event-image"
+                  class="img-fluid rounded"
+                />
+              </div>
+              <div class="details">
+                <div class="category text-center">{{ event.category }}</div>
+                <div
+                  class="info d-flex align-items-center justify-content-between"
+                >
+                  <div class="location">{{ event.location }}</div>
+                  <div class="date">{{ event.date }}</div>
+                </div>
+                <div class="title">{{ event.title }}</div>
+                <div class="price">{{ event.price }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            class="load-more btn"
+            :class="
+              theme == 'primary' ? 'btn-tanmya-primary' : 'btn-tanmya-secondary'
+            "
+          >
+            عرض المزيد
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+<script>
+export default {
+  name: "ProgramsAndEvents",
+  props: {
+    title: {
+      default: "البرامج والفعاليات الحالية ( الحضورية )",
+      type: String,
+    },
+    theme: {
+      default: "primary",
+      type: String,
+    },
+  },
+  data() {
+    return {
+      events: [
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+        {
+          image: "/img/events/event1.jpg",
+          category: "رجال و نساء",
+          location: "الرياض",
+          date: "2020/10/21",
+          title: "إسم الفعالية",
+          price: "120 ريال",
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.programs-and-events {
+  color: #191919;
+  border-bottom: 1px solid #d3d3d3;
+  @media (max-width: 768px) {
+    padding-bottom: 40px;
+  }
+  &.secondary {
+    .section-title {
+      color: #92187b;
+    }
+    .events-boxes .inner-box .details .category {
+      background-color: #92187b24;
+    }
+  }
+  .events-boxes {
+    .inner-box {
+      @media (max-width: 768px) {
+        margin-bottom: 60px;
+      }
+      &:hover {
+        .details {
+          box-shadow: 0 14px 40px #00000044;
+        }
+      }
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+      .details {
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 0 1px 1px #00000016;
+        transition: all 0.3s ease;
+        .category {
+          background-color: rgb(36, 98, 132, 14%);
+          color: #191919;
+          font-size: 12px;
+          border-radius: 50px;
+          padding: 5px;
+          margin-bottom: 5px;
+          font-weight: 500;
+        }
+        .location,
+        .date {
+          font-weight: 400;
+          font-size: 12px;
+        }
+        .title {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+    .load-more {
+      width: 350px;
+      @media (max-width: 576px) {
+        width: 250px;
+      }
+    }
+  }
+}
+</style>
