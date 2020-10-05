@@ -2,6 +2,7 @@
   <section
     class="programs-and-events"
     :class="[events.length > 8 ? 'pb-70' : 'pb-100', theme]"
+    v-if="events.length"
   >
     <div class="container">
       <div class="text-center">
@@ -37,6 +38,7 @@
         <div class="text-center">
           <button
             class="load-more btn"
+            v-if="events.length > 8"
             :class="
               theme == 'primary' ? 'btn-tanmya-primary' : 'btn-tanmya-secondary'
             "
@@ -56,80 +58,14 @@ export default {
       default: "البرامج والفعاليات الحالية ( الحضورية )",
       type: String,
     },
+    events: {
+      default: [],
+      type: Array,
+    },
     theme: {
       default: "primary",
       type: String,
     },
-  },
-  data() {
-    return {
-      events: [
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-        {
-          image: "/img/events/event1.jpg",
-          category: "رجال و نساء",
-          location: "الرياض",
-          date: "2020/10/21",
-          title: "إسم الفعالية",
-          price: "120 ريال",
-        },
-      ],
-    };
   },
 };
 </script>
