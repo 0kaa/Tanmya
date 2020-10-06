@@ -60,7 +60,35 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-sm">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="region">الدولة</label>
+                      <select class="custom-select" id="region">
+                        <option selected disabled value="">المنطقة</option>
+                        <option value="الرياض">الرياض</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="gender">الجنس</label>
+                      <select class="custom-select" id="gender">
+                        <option selected disabled value="">الجنس</option>
+                        <option value="ذكر">ذكر</option>
+                        <option value="انثي">انثي</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="city">المدينة</label>
+                      <select class="custom-select" id="city">
+                        <option selected disabled value="">المدينة</option>
+                        <option value="العليا">العليا</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
                     <div class="form-group">
                       <label for="password">كلمة المرور</label>
                       <input
@@ -75,6 +103,17 @@
                           alt="eye"
                           class="img-fluid"
                       /></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="date">تاريخ الميلاد</label>
+                      <input
+                        type="date"
+                        name="date"
+                        class="form-control"
+                        id="date"
+                      />
                     </div>
                   </div>
                 </div>
@@ -108,7 +147,8 @@ export default {
 
 <style lang="scss" scoped>
 .sign-up {
-  height: 100vh;
+  height: 100%;
+  //   padding: 100px 0;
   overflow: hidden;
   background-image: url("/img/signup.jpg");
   background-repeat: no-repeat;
@@ -119,6 +159,7 @@ export default {
   }
   .sign-form {
     max-width: 730px;
+    padding: 100px 0;
     width: 730px;
     @media (max-width: 1200px) {
       max-width: 100%;
