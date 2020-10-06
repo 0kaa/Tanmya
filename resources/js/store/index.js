@@ -4,12 +4,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        menuToggle: false
+        menuToggle: false,
+        menuDropdown: false
     },
 
     mutations: {
         sideMenuToggle(state, status) {
             state.menuToggle = status;
+        },
+        menuDropdownToggle(state, status) {
+            state.menuDropdown = status;
         }
     },
     getters: {}

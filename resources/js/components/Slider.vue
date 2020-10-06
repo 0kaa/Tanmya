@@ -3,8 +3,9 @@
     <div class="d-flex align-items-center justify-content-center h-100">
       <div class="container">
         <div class="content text-center">
-          <h2 class="text-tanmya-primary">إبحث عن فعاليتك المناسبة ..</h2>
-          <div class="search-container">
+          <h2 class="text-tanmya-primary" v-if="title">{{ title }}</h2>
+          <p class="description" v-if="description">{{ description }}</p>
+          <div class="search-container" v-if="search">
             <form class="search-form">
               <select class="form-control">
                 <option>المكان</option>
@@ -35,6 +36,20 @@
 <script>
 export default {
   name: "Slider",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    search: {
+      type: Boolean,
+      default: true,
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
@@ -52,6 +67,14 @@ export default {
     margin-bottom: 30px;
     @media (max-width: 768px) {
       font-size: 28px;
+    }
+  }
+  .description {
+    width: 65%;
+    margin: auto;
+    font-size: 22px;
+    @media (max-width: 992px) {
+      width: 100%;
     }
   }
   .search-form {

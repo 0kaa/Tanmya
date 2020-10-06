@@ -19,6 +19,6 @@ mix.js("resources/js/app.js", "public/js").sass(
 mix.options({
     hmrOptions: {
         host: "192.168.1.7",
-        port: 8080
+        port: 8000
     }
 });

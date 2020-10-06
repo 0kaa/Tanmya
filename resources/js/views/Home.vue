@@ -1,6 +1,6 @@
 <template>
   <main class="home">
-    <Slider></Slider>
+    <Slider title="إبحث عن فعاليتك المناسبة .." :search="true"></Slider>
     <ProgramsAndEvents
       title="البرامج والفعاليات الحالية ( الحضورية )"
       :events="firstSection"

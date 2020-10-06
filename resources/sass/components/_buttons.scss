@@ -40,3 +40,27 @@
         color: #FFF;
     }
 }
+
+.btn-tanmya-secondary-outline {
+    border: 1px solid;
+    border-color: #92187B;
+    border-radius: 50px;
+    color: #92187B;
+
+    &:hover {
+        color: #fff;
+        background-color: #92187B;
+    }
+}
+
+.btn-tanmya-primary-outline {
+    border: 1px solid;
+    border-color: #246284;
+    border-radius: 50px;
+    color: #246284;
+
+    &:hover {
+        color: #fff;
+        background-color: #246284;
+    }
+}
