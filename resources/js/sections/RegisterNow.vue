@@ -3,15 +3,21 @@
     <div class="container">
       <div class="content text-center">
         <div class="intro mb-30">
-          <h3 class="title text-tanmya-primary">سجل الآن</h3>
+          <h3 class="title text-tanmya-primary" v-if="!this.$store.state.user">
+            سجل الآن
+          </h3>
+          <h3 class="title text-tanmya-primary" v-else>هل أنت مدرب</h3>
           <p class="description">
             واستمتع بخدمات منصة التنمية والاشتراك في الفعاليات والمؤتمرات
             والدورات
           </p>
         </div>
-        <div class="buttons">
+        <div class="buttons" v-if="!this.$store.state.user">
           <a href="#" class="btn btn-tanmya-primary">تسجيل دخول</a>
           <a href="#" class="btn btn-tanmya-secondary">تسجيل جديد</a>
+        </div>
+        <div class="buttons" v-else>
+          <a href="#" class="btn btn-tanmya-secondary">سجل كمدرب الآن</a>
         </div>
       </div>
     </div>

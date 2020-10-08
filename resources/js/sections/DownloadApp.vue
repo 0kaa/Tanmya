@@ -37,7 +37,7 @@
     <div class="email-list">
       <div class="container">
         <h3 class="title">القائمة البريدية</h3>
-        <p class="description">
+        <p class="description mb-5">
           اشترك لمتابعة آخر أخبار مجتمع مطوري جوجل السحابي السعودي
         </p>
         <form>
@@ -109,7 +109,8 @@
 
         @media (max-width: 768px) {
           text-align: center;
-          width: 100%;
+          width: 80%;
+          margin: auto;
         }
       }
       .btn {
