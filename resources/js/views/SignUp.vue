@@ -147,8 +147,6 @@ export default {
 
 <style lang="scss" scoped>
 .sign-up {
-  height: 100%;
-  //   padding: 100px 0;
   overflow: hidden;
   background-image: url("/img/signup.jpg");
   background-repeat: no-repeat;

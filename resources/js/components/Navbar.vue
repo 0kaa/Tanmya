@@ -138,7 +138,9 @@
               <router-link class="dropdown-item" to="/my-account"
                 >حسابي</router-link
               >
-              <a class="dropdown-item" href="#">اشتراكاتي</a>
+              <router-link class="dropdown-item" to="/my-account/subscriptions"
+                >اشتراكاتي</router-link
+              >
               <a class="dropdown-item register-trainer" href="#"
                 >التسجيل كمدرب</a
               >

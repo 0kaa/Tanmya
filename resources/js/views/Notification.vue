@@ -45,7 +45,6 @@ export default {
 <style lang="scss" scoped>
 .notification {
   padding: 100px 0;
-  height: 100%;
   .header-section {
     .title {
       font-size: 24px;

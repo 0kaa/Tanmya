@@ -7,6 +7,7 @@ import Notification from "./views/Notification.vue";
 import MyAccount from "./views/MyAccount.vue";
 import EditAccount from "./views/EditAccount.vue";
 import ChangePassword from "./views/ChangePassword.vue";
+import Subscriptions from "./views/Subscriptions.vue";
 
 const routes = [
     {
@@ -53,6 +54,11 @@ const routes = [
         path: "/my-account/change-password",
         name: "ChangePassword",
         component: ChangePassword
+    },
+    {
+        path: "/my-account/subscriptions",
+        name: "Subscriptions",
+        component: Subscriptions
     }
 ];
 

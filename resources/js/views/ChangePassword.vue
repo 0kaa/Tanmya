@@ -42,8 +42,8 @@ export default {
   name: "ChangePassword",
   data() {
     return {
-      oldPassword: false,
-      newPassword: false,
+      oldPassword: true,
+      newPassword: true,
     };
   },
 };

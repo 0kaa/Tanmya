@@ -77,7 +77,6 @@ export default {
 
 <style lang="scss" scoped>
 .sign-in {
-  height: 100vh;
   overflow: hidden;
   background-image: url("/img/signin.jpg");
   background-size: cover;

@@ -106,7 +106,7 @@ export default {
   name: "EditAccount",
   data() {
     return {
-      password: false,
+      password: true,
     };
   },
 };
@@ -115,7 +115,6 @@ export default {
 <style lang="scss" scoped>
 .edit-account {
   padding: 100px 0;
-  height: 100%;
   .title {
     font-size: 24px;
     font-weight: bold;
