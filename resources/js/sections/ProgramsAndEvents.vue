@@ -13,7 +13,11 @@
       <div class="events-boxes">
         <div class="events row">
           <div class="col-md-3" v-for="(event, i) in events" :key="i">
-            <div class="inner-box" :class="events.length > 4 ? 'mb-30' : ''">
+            <router-link
+              :to="`/event/${event.slug}`"
+              class="inner-box"
+              :class="events.length > 4 ? 'mb-30' : ''"
+            >
               <div class="img">
                 <img
                   :src="event.image"
@@ -32,13 +36,13 @@
                 <div class="title">{{ event.title }}</div>
                 <div class="price">{{ event.price }}</div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="text-center">
           <button
             class="load-more btn"
-            v-if="events.length > 8"
+            v-if="events.length >= 8"
             :class="
               theme == 'primary' ? 'btn-tanmya-primary' : 'btn-tanmya-secondary'
             "
@@ -87,6 +91,8 @@ export default {
   }
   .events-boxes {
     .inner-box {
+      display: block;
+      color: #191919;
       @media (max-width: 768px) {
         margin-bottom: 60px;
       }
@@ -105,6 +111,7 @@ export default {
         background-color: #fff;
         box-shadow: 0 1px 1px #00000016;
         transition: all 0.3s ease;
+        border-radius: 0px 0px 10px 10px;
         .category {
           background-color: rgb(36, 98, 132, 14%);
           color: #191919;

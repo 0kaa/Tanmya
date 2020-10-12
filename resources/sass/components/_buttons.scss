@@ -1,5 +1,7 @@
 // Our Buttons
-
+.btn {
+    transition: all .5s ease;
+}
 .btn-tanmya-primary {
     background-color: #246284;
     color: #FFF;
@@ -12,6 +14,7 @@
     &:hover {
         background-color: #51D8B8;
         color: #FFF;
+        border-radius: 8px;
     }
 }
 
@@ -27,6 +30,7 @@
     &:hover {
         background-color: #F7AD0E;
         color: #FFF;
+        border-radius: 8px;
     }
 }
 
@@ -38,6 +42,7 @@
     &:hover {
         box-shadow: 0 10px 6px #00000047;
         color: #FFF;
+        border-radius: 8px;
     }
 }
 
@@ -50,6 +55,7 @@
     &:hover {
         color: #fff;
         background-color: #92187B;
+        border-radius: 8px;
     }
 }
 
@@ -62,5 +68,6 @@
     &:hover {
         color: #fff;
         background-color: #246284;
+        border-radius: 8px;
     }
 }

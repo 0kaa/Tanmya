@@ -1,7 +1,7 @@
 <template>
   <main class="change-password">
     <div class="container">
-      <h1 class="title mt-50 mb-50">تغيير كلمة المرور</h1>
+      <h1 class="title mt-4 mb-4">تغيير كلمة المرور</h1>
       <form class="form">
         <div class="form-group">
           <label for="password">كلمة المرور القديمة</label>
@@ -52,6 +52,9 @@ export default {
 <style lang="scss" scoped>
 .change-password {
   padding: 100px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
   .title {
     font-size: 24px;
     font-weight: bold;

@@ -1,18 +1,20 @@
 <template>
   <main class="subscriptions">
     <div class="container">
-      <h1 class="title mt-50 mb-50">اشتراكاتي</h1>
-      <div class="buttons-nav mb-20">
-        <button
-          :class="active === 'current' ? 'active' : ''"
-          @click.prevent="addActiveClass('current')"
-          v-text="'الحالية'"
-        ></button>
-        <button
-          :class="active === 'previous' ? 'active' : ''"
-          @click.prevent="addActiveClass('previous')"
-          v-text="'السابقة'"
-        ></button>
+      <div class="header-section mt-4 mb-5">
+        <h1 class="title">اشتراكاتي</h1>
+        <div class="buttons-nav">
+          <button
+            :class="active === 'current' ? 'active' : ''"
+            @click.prevent="addActiveClass('current')"
+            v-text="'الحالية'"
+          ></button>
+          <button
+            :class="active === 'previous' ? 'active' : ''"
+            @click.prevent="addActiveClass('previous')"
+            v-text="'السابقة'"
+          ></button>
+        </div>
       </div>
 
       <transition-group name="sub" tag="div" class="subscriptions-container">
@@ -91,7 +93,6 @@
           </div>
         </div>
 
-
         <div class="previous" v-if="active == 'previous'" :key="2">
           <div
             class="box"
@@ -116,7 +117,48 @@
                 </div>
               </div>
             </div>
-            <div class="rating">tatete</div>
+            <!-- Rating -->
+            <div class="rating text-center">
+              <h2 class="rating-title">
+                {{ subscription.rating ? "تقييمك" : "قيمنا" }}
+              </h2>
+              <div
+                class="stars-rating d-flex align-items-center justify-content-center"
+              >
+                <div
+                  class="star ml-2"
+                  v-for="i in 5"
+                  :key="i"
+                  :id="i"
+                  :class="subscription.rating ? 'voted' : ''"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24.983"
+                    height="25.02"
+                    viewBox="0 0 24.983 25.02"
+                  >
+                    <path
+                      d="M11.821,18.995,18.9,22.908,17.548,14.62l5.727-5.87L15.36,7.541,11.821,0,8.281,7.541.367,8.75l5.727,5.87L4.742,22.908Z"
+                      transform="translate(0.67 1.177)"
+                      :fill="
+                        subscription.rating && i <= subscription.ratingLevel
+                          ? '#F7AD0E'
+                          : 'none'
+                      "
+                      :stroke="
+                        subscription.rating && i <= subscription.ratingLevel
+                          ? '#F7AD0E'
+                          : '#9f9f9f'
+                      "
+                      stroke-linecap="round"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <div class="pay text-center">
               <div class="price">{{ subscription.price }}</div>
               <div class="status online">
@@ -203,6 +245,8 @@ export default {
           price: "120 ريال",
           status: "online",
           cashCode: "",
+          rating: false,
+          ratingLevel: 0,
         },
         {
           image: "/img/subscriptions/prev/2.jpg",
@@ -215,6 +259,8 @@ export default {
           price: "120 ريال",
           status: "bank",
           cashCode: "",
+          rating: true,
+          ratingLevel: 4,
         },
         {
           image: "/img/subscriptions/prev/3.jpg",
@@ -227,6 +273,8 @@ export default {
           price: "120 ريال",
           status: "cash",
           cashCode: "JK - 2378",
+          rating: true,
+          ratingLevel: 4,
         },
       ],
     };
@@ -242,58 +290,84 @@ export default {
 <style lang="scss" scoped>
 .subscriptions {
   padding: 100px 0;
-  .title {
-    font-size: 24px;
-    font-weight: bold;
+  @media (max-width: 992px) {
+    padding: 50px 0;
   }
-  .buttons-nav {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    button {
-      border: none;
-      background: none;
-      font-weight: 600;
-      font-size: 20px;
-      position: relative;
-      padding: 0;
-      padding-bottom: 10px;
-      transition: all 0.3s ease;
-      &:before {
-        content: "";
-        position: absolute;
-        left: 200%;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        border-radius: 50px;
-        background-color: transparent;
-        transition: left 0.5s ease, right 0.5s ease;
+  .header-section {
+    @media (max-width: 992px) {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      @media (max-width: 992px) {
+        font-size: 20px;
+        margin: 0;
       }
-      &:first-child {
-        margin-left: 70px;
+    }
+    .buttons-nav {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      button {
+        border: none;
+        background: none;
+        font-weight: 600;
+        font-size: 20px;
+        position: relative;
+        padding: 0;
+        padding-bottom: 10px;
+        transition: all 0.3s ease;
         &:before {
           content: "";
-          left: inherit;
-          right: 200%;
-        }
-        &.active {
-          &:before {
-            content: "";
-            right: 0;
+          position: absolute;
+          left: 200%;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          border-radius: 50px;
+          background-color: transparent;
+          transition: left 0.5s ease, right 0.5s ease;
+          @media (max-width: 992px) {
+            left: 100%;
           }
         }
-      }
-      &.active {
-        color: #92187b;
-        &:before {
-          content: "";
-          left: 0;
-          background-color: #92187b;
+        &:first-child {
+          margin-left: 70px;
+          @media (max-width: 992px) {
+            margin-left: 20px;
+          }
+          &:before {
+            content: "";
+            left: inherit;
+            right: 200%;
+            @media (max-width: 992px) {
+              right: 100%;
+            }
+          }
+          &.active {
+            &:before {
+              content: "";
+              right: 0;
+            }
+          }
+        }
+        &.active {
+          color: #92187b;
+          &:before {
+            content: "";
+            left: 0;
+            background-color: #92187b;
+          }
         }
       }
     }
   }
+
   .subscriptions-container {
     overflow: hidden;
     position: relative;
@@ -303,15 +377,38 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      &:first-child {
+        padding-top: 0;
+      }
+
+      @media (max-width: 992px) {
+        display: block;
+      }
       .about-sub {
         display: flex;
+        @media (max-width: 992px) {
+          display: block;
+        }
         .image {
           margin-left: 20px;
-          border-radius: 8px;
-          overflow: hidden;
+          img {
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          @media (max-width: 992px) {
+            margin-left: 0;
+            margin-bottom: 30px;
+            img {
+              width: 100%;
+            }
+          }
         }
         .info {
           align-self: center;
+          @media (max-width: 992px) {
+            margin-bottom: 30px;
+            padding-right: 10px;
+          }
           .category {
             font-size: 12px;
             margin-bottom: 8px;
@@ -336,7 +433,11 @@ export default {
             font-size: 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: 992px) {
+              font-size: 14px;
+              justify-content: inherit;
+            }
             &.prev {
               font-size: 14px;
               font-weight: 500;
@@ -353,14 +454,38 @@ export default {
               margin-left: 20px;
               font-size: 20px;
               font-weight: bold;
+              @media (max-width: 992px) {
+                font-size: 14px;
+              }
             }
             .year-date {
               margin-left: 40px;
+              @media (max-width: 992px) {
+                margin-left: 20px;
+              }
             }
           }
         }
       }
 
+      .rating {
+        padding: 10px 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        @media (max-width: 992px) {
+          margin-bottom: 30px;
+        }
+        .rating-title {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        .star {
+          cursor: pointer;
+          &.voted {
+            cursor: inherit;
+          }
+        }
+      }
       .pay {
         padding: 20px;
         background-color: #eaeaea;
@@ -403,6 +528,11 @@ export default {
               width: 70%;
               margin: auto;
               margin-bottom: 20px;
+            }
+            .position-relative {
+              @media (max-width: 992px) {
+                width: 100%;
+              }
             }
             .upload-image {
               display: flex;
@@ -447,7 +577,7 @@ export default {
 
 .sub-enter-active,
 .sub-leave-active {
-  transition: all 0.5s linear;
+  transition: all 0.5s;
   left: 0;
   position: relative;
   &.previous {

@@ -62,7 +62,7 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="region">الدولة</label>
+                      <label for="region">المنطقة</label>
                       <select class="custom-select" id="region">
                         <option selected disabled value="">المنطقة</option>
                         <option value="الرياض">الرياض</option>

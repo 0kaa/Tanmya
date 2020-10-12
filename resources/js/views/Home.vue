@@ -37,6 +37,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event2.jpg",
@@ -45,6 +46,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event3.jpg",
@@ -53,6 +55,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event4.jpg",
@@ -61,6 +64,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event5.jpg",
@@ -69,6 +73,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event6.jpg",
@@ -77,6 +82,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event7.jpg",
@@ -85,6 +91,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event8.jpg",
@@ -93,6 +100,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
       ],
       secoundSection: [
@@ -103,6 +111,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event10.jpg",
@@ -111,6 +120,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event11.jpg",
@@ -119,6 +129,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event12.jpg",
@@ -127,6 +138,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event13.jpg",
@@ -135,6 +147,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event14.jpg",
@@ -143,6 +156,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event15.jpg",
@@ -151,6 +165,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event16.jpg",
@@ -159,6 +174,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
       ],
       thirtySection: [
@@ -169,6 +185,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event18.jpg",
@@ -177,6 +194,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event19.jpg",
@@ -185,6 +203,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event20.jpg",
@@ -193,6 +212,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event21.jpg",
@@ -201,6 +221,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event22.jpg",
@@ -209,6 +230,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event23.jpg",
@@ -217,6 +239,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
         {
           image: "/img/events/event24.jpg",
@@ -225,6 +248,7 @@ export default {
           date: "2020/10/21",
           title: "إسم الفعالية",
           price: "120 ريال",
+          slug: "test",
         },
       ],
     };

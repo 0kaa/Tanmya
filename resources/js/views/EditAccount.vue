@@ -1,7 +1,7 @@
 <template>
   <main class="edit-account">
     <div class="container">
-      <h1 class="title mt-50 mb-50">تعديل بياناتي</h1>
+      <h1 class="title mt-4 mb-4">تعديل بياناتي</h1>
       <div class="form">
         <form>
           <div class="form-row">
@@ -115,6 +115,9 @@ export default {
 <style lang="scss" scoped>
 .edit-account {
   padding: 100px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
   .title {
     font-size: 24px;
     font-weight: bold;

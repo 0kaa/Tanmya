@@ -80,6 +80,9 @@ export default {
 <style lang="scss" scoped>
 .my-account {
   padding: 100px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
   .title {
     font-size: 24px;
     font-weight: bold;

@@ -72,12 +72,7 @@
     }
     img {
       margin-bottom: -100px;
-      transition: all 0.3s ease;
       transform: rotate(14deg);
-
-      &:hover {
-        transform: rotate(360deg);
-      }
     }
   }
   .title {

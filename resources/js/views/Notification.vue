@@ -2,7 +2,7 @@
   <main class="notification">
     <div class="container">
       <div
-        class="header-section d-flex align-items-center justify-content-between mt-4"
+        class="header-section d-flex align-items-center justify-content-between mt-4 mb-4"
       >
         <h1 class="title">الإشعارات</h1>
         <div class="new-notification">جديد <span class="count">2</span></div>
@@ -45,10 +45,14 @@ export default {
 <style lang="scss" scoped>
 .notification {
   padding: 100px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
   .header-section {
     .title {
       font-size: 24px;
       font-weight: bold;
+      margin: 0;
     }
     .new-notification {
       font-size: 14px;

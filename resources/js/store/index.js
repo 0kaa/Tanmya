@@ -6,7 +6,9 @@ export default new Vuex.Store({
     state: {
         menuToggle: false,
         menuDropdown: false,
-        user: true
+        user: true,
+        subscribeStatus: "event",
+        subscribeStep: false
     },
 
     mutations: {
