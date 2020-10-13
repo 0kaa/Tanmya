@@ -78,8 +78,11 @@
         </div>
       </div>
 
-      <div class="buttons d-flex align-items-center" v-if="!this.$store.state.subscribeStep">
-        <div class="btn btn-tanmya-secondary ml-5" @click="nextStep">تاكيد</div>
+      <div
+        class="buttons d-flex align-items-center"
+        v-if="!this.$store.state.subscribeStep"
+      >
+        <div class="btn btn-tanmya-secondary" @click="nextStep">تاكيد</div>
         <div class="btn" @click="backStep">الغاء</div>
       </div>
     </form>
@@ -164,9 +167,16 @@ export default {
   .btn.btn-tanmya-secondary {
     width: 350px;
     padding: 10px;
+    margin-left: 3rem;
     @media (max-width: 768px) {
       width: auto;
-      padding: 10px 60px;
+      padding: 5px 30px;
+      margin-left: 1rem;
+    }
+  }
+  .btn {
+    @media (max-width: 768px) {
+      font-size: 14px;
     }
   }
 }

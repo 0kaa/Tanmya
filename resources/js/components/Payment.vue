@@ -15,7 +15,7 @@
       <div class="taps">
         <div v-if="currentTap == 1" class="online-tap">
           <div class="buttons d-flex align-items-center">
-            <div class="btn btn-tanmya-secondary ml-5">تاكيد الدفع</div>
+            <div class="btn btn-tanmya-secondary">تاكيد الدفع</div>
             <div class="btn" @click="backStep">الغاء</div>
           </div>
         </div>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="buttons d-flex align-items-center">
-            <div class="btn btn-tanmya-secondary ml-5">تاكيد الدفع</div>
+            <div class="btn btn-tanmya-secondary">تاكيد الدفع</div>
             <div class="btn" @click="backStep">الغاء</div>
           </div>
         </div>
@@ -43,7 +43,7 @@
             <div class="cash-number">JK - 2378</div>
           </div>
           <div class="buttons d-flex align-items-center">
-            <div class="btn btn-tanmya-secondary ml-5">تاكيد الدفع</div>
+            <div class="btn btn-tanmya-secondary">تاكيد الدفع</div>
             <div class="btn" @click="backStep">الغاء</div>
           </div>
         </div>
@@ -93,22 +93,41 @@ export default {
   .btn.btn-tanmya-secondary {
     width: 350px;
     padding: 10px;
+    margin-left: 3rem;
     @media (max-width: 768px) {
       width: auto;
-      padding: 10px 60px;
+      padding: 5px 30px;
+      font-size: 14px;
+      margin-left: 1rem;
+    }
+  }
+  .btn {
+    @media (max-width: 768px) {
+      font-size: 14px;
     }
   }
   .content {
     width: 80%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     .header-select {
       display: flex;
       align-items: center;
       margin-bottom: 40px;
+      @media (max-width: 768px) {
+        width: 100%;
+        justify-content: space-between;
+      }
       li {
         margin-left: 80px;
         position: relative;
         display: flex;
         align-items: center;
+        @media (max-width: 768px) {
+          margin-left: 0;
+          font-size: 12px;
+        }
         cursor: pointer;
         &:before {
           content: "";
@@ -120,6 +139,10 @@ export default {
           display: inline-block;
           margin-left: 10px;
           transition: 0.3s ease;
+          @media (max-width: 768px) {
+            width: 20px;
+            height: 20px;
+          }
         }
         &:after {
           content: "";
@@ -132,6 +155,10 @@ export default {
           position: absolute;
           right: 5px;
           transition: 0.3s ease;
+          @media (max-width: 768px) {
+            width: 10px;
+            height: 10px;
+          }
         }
         &.active:before {
           border-color: #92187b;
@@ -146,6 +173,10 @@ export default {
         .banks {
           display: flex;
           align-items: center;
+          overflow: hidden;
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
           .bank {
             margin-left: 30px;
             padding: 30px 50px;
@@ -153,13 +184,22 @@ export default {
             text-align: center;
             border-radius: 10px;
             display: inline-block;
+            @media (max-width: 768px) {
+              margin: 0 0 30px;
+            }
             .bank-title,
             .bank-subtitle {
               font-size: 16px;
               font-weight: 600;
+              @media (max-width: 768px) {
+                font-size: 14px;
+              }
             }
             .bank-number {
               font-size: 24px;
+               @media (max-width: 768px) {
+              font-size: 18px;
+            }
             }
           }
         }
@@ -171,12 +211,21 @@ export default {
           text-align: center;
           border-radius: 10px;
           display: inline-block;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
           .cash-title {
             font-size: 16px;
             font-weight: 600;
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
           }
           .cash-number {
             font-size: 24px;
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
           }
         }
       }

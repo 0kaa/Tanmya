@@ -154,6 +154,8 @@ export default {
   @media (max-width: 1200px) {
     background: #fff;
     text-align: center;
+    height: auto;
+    padding: 100px 0 50px;
   }
   .sign-form {
     max-width: 730px;
@@ -162,6 +164,7 @@ export default {
     @media (max-width: 1200px) {
       max-width: 100%;
       width: 100%;
+      padding: 0;
     }
     .backlink {
       width: 48px;

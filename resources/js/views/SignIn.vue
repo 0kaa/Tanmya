@@ -83,6 +83,8 @@ export default {
   @media (max-width: 1200px) {
     background: #fff;
     text-align: center;
+    height: auto;
+    padding: 100px 0 50px;
   }
   .sign-form {
     max-width: 350px;

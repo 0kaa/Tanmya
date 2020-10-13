@@ -100,6 +100,9 @@ export default {
     }
     .btn {
       flex: 0 1 50%;
+      @media (max-width: 992px) {
+        margin-top: 20px;
+      }
     }
   }
 }
