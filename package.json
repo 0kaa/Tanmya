@@ -1,32 +1,69 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.19",
-        "bootstrap": "^4.0.0",
-        "cross-env": "^7.0",
-        "font-awesome": "^4.7.0",
-        "jquery": "^3.2",
-        "laravel-mix": "^5.0.5",
-        "lodash": "^4.17.20",
-        "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.20.1",
-        "sass-loader": "^8.0.0",
-        "uuid": "^8.2.0",
-        "vue": "^2.5.17",
-        "vue-router": "^3.2.0",
-        "vue-template-compiler": "^2.6.10"
-    },
-    "dependencies": {
-        "vuex": "^3.5.1"
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "lint": "eslint --ext .js,.vue .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "test": "npm run mix:test && npm run nuxt:test",
+    "mix:dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "mix:watch": "npm run mix:dev -- --watch",
+    "mix:watch:poll": "npm run mix:watch -- --watch-poll",
+    "mix:hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "mix:build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "mix:test": "echo no test",
+    "nuxt:dev": "nuxt",
+    "nuxt:build": "nuxt build",
+    "nuxt:test": "jest"
+  },
+  "devDependencies": {
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/eslint-config": "^2.0.2",
+    "@nuxtjs/eslint-module": "^1.2.0",
+    "@vue/test-utils": "^1.1.0",
+    "axios": "^0.19.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.5.1",
+    "bootstrap-vue": "^2.17.3",
+    "cross-env": "^5.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-nuxt": "^0.5.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^3.1.0",
+    "jest": "^25.5.4",
+    "laravel-mix": "^4.0.7",
+    "lint-staged": "^9.5.0",
+    "lodash": "^4.17.20",
+    "nuxt": "^2.14.7",
+    "nuxt-laravel": "^4.2.9",
+    "prettier": "^1.19.1",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.12",
+    "vue-jest": "^3.0.7",
+    "vue-server-renderer": "^2.6.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/proxy": "^2.0.1"
+  }
 }

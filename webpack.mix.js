@@ -1,4 +1,4 @@
-const mix = require("laravel-mix");
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -10,15 +10,7 @@ const mix = require("laravel-mix");
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.js("resources/js/app.js", "public/js").sass(
-    "resources/sass/app.scss",
-    "public/css"
-);
-
-mix.options({
-    hmrOptions: {
-        host: "192.168.1.7",
-        port: 8000
-    }
-});
+mix.setPublicPath('public_html')
+mix
+  .js('resources/js/app.js', 'js')
+  .sass('resources/sass/app.scss', 'css')
